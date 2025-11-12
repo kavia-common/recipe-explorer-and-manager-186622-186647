@@ -1,3 +1,23 @@
-<div class="container">
-  <h1>{{ title }}</h1>
+<div class="app-root">
+  <header class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <div class="brand" aria-label="Recipe Explorer home">
+        <span style="display:inline-flex;width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#2563EB,#60a5fa)"></span>
+        <span>Recipe Explorer</span>
+      </div>
+      <div class="spacer"></div>
+      <nav class="nav-links" aria-label="Primary">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-label="Home">Home</a>
+        <a routerLink="/favorites" routerLinkActive="active" aria-label="Favorites">Favorites</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:1.25rem; padding-bottom:2rem">
+    <router-outlet />
+  </main>
+
+  <footer class="container small-text" style="padding-bottom:2rem">
+    <span>&copy; {{year}} Ocean Professional Theme</span>
+  </footer>
 </div>
